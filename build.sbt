@@ -6,7 +6,7 @@ lazy val `betmaster` = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.11.7"
 
-libraryDependencies ++= Seq( jdbc , cache , ws   , specs2 % Test, "org.scalaj" %% "scalaj-http" % "2.2.1")
+libraryDependencies ++= Seq( jdbc , cache , ws   , specs2 % Test, "org.scalaj" %% "scalaj-http" % "2.2.1", "org.webjars.bower" % "bootstrap-sass" % "3.3.6")
 
 unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/test" )  
 

@@ -38,6 +38,10 @@ object Scoreboard {
     val d = d2.drop(1).mkString("(").split('}')
     val data = d.take(d.length-1).mkString("}").concat("}")
     val js = Json.parse(data)
+    val file2 = new File("C:\\Users\\majesiu\\Desktop\\games.json")
+    val bw2 = new BufferedWriter(new FileWriter(file2))
+    bw2.write(Json.prettyPrint(js))
+    bw2.close()
     js
   }
 
