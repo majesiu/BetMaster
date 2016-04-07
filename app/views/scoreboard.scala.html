@@ -1,16 +1,22 @@
-@(content: Html)
+@(content: Html)(form: Form[MatchDay])
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Wyniki meczy</title>
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")">
-</head>
-<body>
-<h1>Dziś w NBA</h1>
-<div class="content">
-    @content
-</div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Wyniki meczy</title>
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")">
+    </head>
+    <body>
+        <h1>Dziś w NBA</h1>
+        <div class="content">
+        @content
+        </div>
+        <div class="form-inline">
+        @helper.form(action = routes.Application.search) {
+            <input type="date" id="date" name="date" class = "form-control" />
+            <button type="submit" class="btn btn-default">Szukaj</button>
+        </div>
+        }
+    </body>
 </html>

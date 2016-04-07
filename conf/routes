@@ -4,6 +4,9 @@
 
 # Home page
 GET     /                           controllers.Application.scoreboard
+GET     /:date                      controllers.Application.scoreboard2(date)
+
+POST   /search                       controllers.Application.search
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
