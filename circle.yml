@@ -9,3 +9,9 @@ dependencies:
   cache_directories:
     - "~/.ivy2"
     - "~/.sbt"
+
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: nba-score-checker
